@@ -156,7 +156,7 @@ def main():
     spot = st.sidebar.text_input("Spot", value="Le Havre")
     type_leurre = st.sidebar.selectbox(
         "Type de leurre",
-        ["Stickbait", "Jig", "Shad", "Minnow", "Cuillère", "Autre"],
+        ["Stickbait", "Jig", "Leurre souple", "Créature", "Autre"],
         index=0,
     )
     nom_leurre = st.sidebar.text_input("Nom du leurre", value="")
@@ -384,11 +384,11 @@ def main():
                 spot_edit = st.text_input("Spot", value=row["spot"])
                 type_leurre_edit = st.selectbox(
                     "Type de leurre",
-                    ["Stickbait", "Jig", "Shad", "Minnow", "Cuillère", "Autre"],
+                    ["Stickbait", "Jig", "Leurre souple", "Créature", "Autre"],
                     index=(
-                        ["Stickbait", "Jig", "Shad", "Minnow", "Cuillère", "Autre"]
+                        ["Stickbait", "Jig", "Leurre souple", "Créature", "Autre"]
                         .index(str(row["type_leurre"]))
-                        if str(row["type_leurre"]) in ["Stickbait", "Jig", "Shad", "Minnow", "Cuillère", "Autre"]
+                        if str(row["type_leurre"]) in ["Stickbait", "Jig", "Leurre souple", "Créature", "Autre"]
                         else 0
                     ),
                 )
